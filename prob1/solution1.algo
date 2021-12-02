@@ -1,0 +1,28 @@
+ALGORITHM p1s1
+VAR
+    t1: ARRAY_OF integer[n];
+    t2: ARRAY_OF integer[m];
+    i,j,sum,sum1,sum2 : integer;
+BEGIN
+  read(n);
+  read(m);
+  somme =0;
+  s1=0;
+  s2=0;
+    FOR i FROM 1 TO n  DO
+        FOR j FROM 1 TO m  DO
+            IF (t1[i]=t2[j]) THEN
+                s1 := s1 + t1[i]; 
+            END_IF
+        END_FOR
+    END_FOR
+    FOR j FROM 1 TO z DO
+        FOR i FROM 1 TO m DO
+            IF (t2[j]=t1[i]) THEN
+                s2 := s2 + t2[j];
+            END_IF
+        END_FOR
+    END_FOR
+    somme := s1+s2;
+    write('somme = ',somme);
+END

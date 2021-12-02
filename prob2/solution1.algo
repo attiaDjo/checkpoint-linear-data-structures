@@ -1,0 +1,14 @@
+ALGORITHM p2s1
+VAR T1,T2 :  ARRAY_OF INTEGER;
+    Somme,i,j : INTEGER ;
+
+BEGIN
+    Somme := 0 
+    FOR i FROM 0 TO T1.length-1   DO
+        FOR j FROM 0 TO T2.length-1   DO
+            if ((T1[i] = T2[j]) ) THEN 
+            Somme := Somme + T1[i]*2
+        END_FOR
+    END_FOR
+      write('Sum of overlapping elements: ',Somme);
+END
